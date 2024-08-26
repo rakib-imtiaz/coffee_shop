@@ -255,6 +255,33 @@ nav ul li a:hover {
     margin-bottom: 30px;
 }
 
+
+
+.swiper-container {
+    width: 100%;
+    height: 400px;  /* Adjust the height as needed */
+    overflow: hidden;  /* Prevents overflow of next image */
+}
+
+.swiper-slide {
+    width: 100%;  /* Make each slide take the full width of the container */
+    height: 100%; /* Make the slide fill the container's height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the slide without distortion */
+    border-radius: 12px;
+}
+
+
+
+
+
 /* Responsive Layout */
 @media (max-width: 1200px) {
     .container {

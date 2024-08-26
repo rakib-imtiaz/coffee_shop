@@ -7,9 +7,32 @@
         <link rel="stylesheet" href="style.css">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> <!-- Font Awesome -->
         <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"> <!-- Swiper.js -->
+
     </head>
     
 </head>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script>
+   const swiper = new Swiper('.swiper-container', {
+    loop: true,
+    slidesPerView: 1,  // Ensure only one slide is shown at a time
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
+});
+
+</script>
+
 <body>
     <div class="container">
         <header>
@@ -72,6 +95,23 @@
                 <p><strong>Brewing Tips:</strong> Use a pour-over or drip coffee maker to enhance the delicate flavors.</p>
             </div>
         </section>
+
+     <section class="content" data-aos="fade-up">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="image1.jpg" alt="Slide 1"></div>
+            <div class="swiper-slide"><img src="image2.jpg" alt="Slide 2"></div>
+            <div class="swiper-slide"><img src="image3.jpg" alt="Slide 3"></div>
+            <!-- Add more slides as needed -->
+        </div>
+        <!-- Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Navigation buttons -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+</section>
+
 
         <!-- About Us Section -->
         <section class="about-us" data-aos="fade-up">
