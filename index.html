@@ -1,62 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Little Avenue Coffee</title>
-    <link rel="stylesheet" href="style.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Little Avenue Coffee</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> <!-- Font Awesome -->
+        <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    </head>
+    
 </head>
 <body>
     <div class="container">
         <header>
-            <div class="content-area">
-                <div class="logo">
-                    <img src="logo.png" alt="Little Avenue Coffee Logo">
+            <div class="header-top">
+                <div class="special-offer">
+                    <!-- <button style="background-color: rgb(185, 185, 185);" class="special-offer-btn">Check Out Our Special Offer</button> -->
                 </div>
-                <nav>
-                    <br>
-                    <ul>
-                        <li><a href="#">Bean Guide</a></li>
-                        <li><a href="#">Shopping</a></li>
-                        <li><a href="#">Catering</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Reviews</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">Location</a></li>
-                        <li><a href="#">Blog</a></li>
-                    </ul>
-                </nav>
+                <div class="auth-buttons">
+                    <button class="login-btn"><i class="fas fa-sign-in-alt"></i> Login</button>
+                    <button class="signup-btn"><i class="fas fa-user-plus"></i> Signup</button>
+                </div>
+                
             </div>
+            <div class="logo">
+                <img src="logo.png" alt="Little Avenue Coffee Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Bean Guide</a></li>
+                    <li><a href="#">Shopping</a></li>
+                    <li><a href="#">Catering</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Review</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Location</a></li>
+                </ul>
+            </nav>
         </header>
-        <section class="content">
+        
+        <section class="content" data-aos="fade-up">
             <div class="content-area">
-                <img style="height: 50vh;width: 120vh;opacity: 80%;" src="section_coffee_image.jpg" alt="Coffee Beans">
+                <img style="height: 50vh; width: 120vh; opacity: 80%;" src="section_coffee_image.jpg" alt="Coffee Beans">
             </div>
         </section>
 
         <!-- Our Premium Coffee Beans Section -->
-<section class="premium-coffee">
-    <h2>Our Premium Coffee Beans</h2>
-    <p>Discover the rich and aromatic flavors of our premium coffee beans, carefully selected and roasted to perfection. Whether you prefer a bold espresso or a smooth latte, our beans are perfect for any coffee lover.</p>
-    <div class="cta-buttons">
-        <button class="cta-btn">Book a Table</button>
-        <button class="cta-btn">Online Order</button>
-        <button class="cta-btn">Catering</button>
+        <section class="premium-coffee" data-aos="fade-up">
+            <h2>Our Premium Coffee Beans</h2>
+            <p>Discover the rich and aromatic flavors of our premium coffee beans, carefully selected and roasted to perfection. Whether you prefer a bold espresso or a smooth latte, our beans are perfect for any coffee lover.</p>
+            <div class="cta-buttons">
+                <button class="cta-btn">Book a Table</button>
+                <button class="cta-btn">Online Order</button>
+                <button class="cta-btn">Catering</button>
+            </div>
+        </section>
+
+        <!-- Bean Guide Section -->
+        <section class="bean-guide" data-aos="fade-up">
+            <h2>Bean Guide</h2>
+            <p>Discover the unique characteristics and flavors of our premium coffee beans. Each variety is carefully selected to provide a distinct coffee experience.</p>
+        </section>
+
+        <!-- Arabica Section -->
+        <section class="arabica-section" data-aos="fade-up">
+            <h2>Arabica</h2>
+            <p>Arabica beans are celebrated for their smooth, sweet flavor profile and high acidity. These beans often exhibit notes of fruit and sugar, complemented by hints of chocolate and nuts. Ideal for a sophisticated and flavorful coffee experience.</p>
+            <div class="arabica-info">
+                <p><strong>Origin:</strong> Ethiopia</p>
+                <p><strong>Tasting Notes:</strong> Fruity, Sugary, Chocolate, Nuts</p>
+                <p><strong>Brewing Tips:</strong> Use a pour-over or drip coffee maker to enhance the delicate flavors.</p>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section class="about-us" data-aos="fade-up">
+            <h2>About Us</h2>
+            <p>At Little Avenue Des Italians, our passion for coffee began many years ago with a small café in the heart of the city. Our founders, inspired by their love for Italian coffee culture, sought to create a place where people could come together to enjoy exceptional coffee and warm hospitality. Today, we continue this tradition, offering a unique blend of premium coffee, delightful pastries, and a welcoming atmosphere. Join us on our journey as we share our love for coffee with the world.</p>
+            <h3>Our Story</h3>
+            <p>Our journey began in a quaint little café where our founders first discovered their love for coffee. Over the years, we've grown and evolved, but our commitment to quality and community remains the same. From sourcing the finest beans to perfecting our brewing techniques, we strive to provide an unparalleled coffee experience.</p>
+            <h3>Our Mission</h3>
+            <p>Our mission is to create a space where people can come together to enjoy great coffee and connect with one another. We believe that coffee is more than just a drink; it's a way to bring people together and foster a sense of community. We are dedicated to sustainability, quality, and customer satisfaction.</p>
+            <h3>Meet The Team</h3>
+            <p>Our team is made up of passionate coffee lovers who are dedicated to delivering the best coffee experience. From our skilled baristas to our friendly staff, everyone at Little Avenue Des Italians is committed to making your visit memorable.</p>
+        </section>
     </div>
-</section>
 
-<!-- Bean Guide Section -->
-<section class="bean-guide">
-    <h2>Bean Guide</h2>
-    <p>Discover the unique characteristics and flavors of our premium coffee beans. Each variety is carefully selected to provide a distinct coffee experience.</p>
-</section>
-
-
-
-
-
-
-
-    </div>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
