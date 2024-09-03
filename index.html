@@ -5,66 +5,83 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Little Avenue Coffee</title>
         <link rel="stylesheet" href="style.css">
+        <link js>
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> <!-- Font Awesome -->
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
         <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"> <!-- Swiper.js -->
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script src="script.js"></script>
+
+        <!-- font -->
+         
+
+
 
     </head>
     
 </head>
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-<script>
-   const swiper = new Swiper('.swiper-container', {
-    loop: true,
-    slidesPerView: 1,  // Ensure only one slide is shown at a time
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-    autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-    },
-});
-
-</script>
 
 <body>
+    <audio id="background-music" loop autoplay>
+        <source src="Assets/sound_Track/track_1.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    
+    <header>
+        <div class="navbar">
+            <div class="nav-left">
+                <ul>
+                    <li><a href="#">Bean Shopping Cart</a></li>
+                    <!-- <li><a href="#">Shopping</a></li> -->
+                    <li><a href="#">Catering</a></li>
+                    <li><a href="#">About Us</a></li>
+                </ul>
+            </div>
+            <!-- <div class="nav-center">
+                <a href="#" class="logo"><img src="Assets/Images/logo_canva.png" alt="Little Avenue Coffee Logo"></a>
+            </div> -->
+            <div class="nav-right">
+                <ul>
+                    <li><a href="#">Review</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <!-- <li><a href="#">Location</a></li> -->
+                    <li><button class="login-btn"><i class="fas fa-sign-in-alt"></i> Login</button></li>
+                    <li><button class="signup-btn"><i class="fas fa-user-plus"></i> Signup</button></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    
     <div class="container">
-        <header>
+
+     
+
+        <section class="first-section">
             <div class="header-top">
                 <div class="special-offer">
                     <!-- <button style="background-color: rgb(185, 185, 185);" class="special-offer-btn">Check Out Our Special Offer</button> -->
                 </div>
-                <div class="auth-buttons">
+                <!-- <div class="auth-buttons">
                     <button class="login-btn"><i class="fas fa-sign-in-alt"></i> Login</button>
                     <button class="signup-btn"><i class="fas fa-user-plus"></i> Signup</button>
-                </div>
+                </div> -->
                 
             </div>
             <div class="logo">
-                <img src="logo.png" alt="Little Avenue Coffee Logo">
+                <img src="Assets/Images/logo_canva.png" alt="Little Avenue Coffee Logo">
             </div>
-            <nav>
-                <ul>
-                    <li><a href="#">Bean Guide</a></li>
-                    <li><a href="#">Shopping</a></li>
-                    <li><a href="#">Catering</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Review</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">Location</a></li>
-                </ul>
-            </nav>
-        </header>
-        
+           
+        </section>
+
+      
+
+
         <section class="content" data-aos="fade-up">
             <div class="content-area">
-                <img style="height: 50vh; width: 120vh; opacity: 80%;" src="section_coffee_image.jpg" alt="Coffee Beans">
+                <img style=" height: 50vh; width: 120vh; opacity: 80%;" src="section_coffee_image.jpg" alt="Coffee Beans">
             </div>
         </section>
 
@@ -125,6 +142,13 @@
             <p>Our team is made up of passionate coffee lovers who are dedicated to delivering the best coffee experience. From our skilled baristas to our friendly staff, everyone at Little Avenue Des Italians is committed to making your visit memorable.</p>
         </section>
     </div>
+
+
+     <!-- Mute/Unmute Button -->
+     <button id="mute-toggle" class="mute-btn">
+        <i id="mute-icon" class="fas fa-volume-up"></i>
+    </button>
+
 
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
