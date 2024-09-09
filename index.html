@@ -75,18 +75,52 @@
 
         <section class="contact-us" data-aos="fade-up">
         </section>
-
         <section class="first-section" data-aos="fade-up">
             <div class="header-top">
-
-
-                <div class="logo">
-                    <img src="Assets/Images/logo_canva.png" alt="Little Avenue Coffee Logo">
-                    <p style="font-size: 35px;text-align: center;font-style: italic;">Little Avenue</p>
-
+                <div class="logo" style="text-align: center;">
+                    <img src="Assets/Images/logo_canva.png" alt="Little Avenue Coffee Logo" style="
+                        width: 200px; /* Default logo size */
+                        transition: transform 0.6s ease; /* Smooth transition for zoom and spin */
+                    " 
+                    onmouseover="this.style.transform='scale(1.4) rotate(360deg)';" 
+                    onmouseout="this.style.transform='scale(1) rotate(0deg)';"> <!-- Zoom and spin effect -->
+        
+                    <p id="blinkingText" style="
+                        font-size: 45px; /* Large text size */
+                        text-align: center;
+                        font-style: italic;
+                        font-weight: bold;
+                        color: #6f4e37; /* Coffee-like color */
+                        transition: transform 0.4s ease; /* Smooth transition for size change */
+                        animation: blinkColor 1s infinite, changeFont 2s infinite; /* Blinking color and font change animations */
+                    " 
+                    onmouseover="this.style.transform='scale(1.2)';" 
+                    onmouseout="this.style.transform='scale(1)';">
+                        Little Avenue
+                    </p>
+                </div>
+            </div>
         </section>
-
-
+        
+        <!-- Add the animation CSS inside the <style> tag -->
+        <style>
+            @keyframes blinkColor {
+                0% { color: #6f4e37; } /* Coffee brown */
+                25% { color: #4b3621; } /* Darker brown */
+                50% { color: #a0522d; } /* Lighter brown */
+                75% { color: #d2691e; } /* Reddish brown */
+                100% { color: #6f4e37; } /* Back to coffee brown */
+            }
+        
+            @keyframes changeFont {
+                0% { font-family: 'Playfair Display', serif; } /* Default font */
+                25% { font-family: 'Cormorant Garamond', serif; } /* Vintage font 1 */
+                50% { font-family: 'Libre Baskerville', serif; } /* Vintage font 2 */
+                75% { font-family: 'Cinzel', serif; } /* Vintage font 3 */
+                100% { font-family: 'Playfair Display', serif; } /* Back to default */
+            }
+        </style>
+        
 
         <section class="content" data-aos="fade-up">
             <div class="content-area" style="position: relative; overflow: hidden; width: 100%; text-align: center;">
