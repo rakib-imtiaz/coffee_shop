@@ -30,6 +30,21 @@
 
 
 <body>
+    <button id="mute-toggle" class="mute-btn" style="
+    position: fixed; /* Stick to the viewport */
+    bottom: 20px;    /* 20px from the bottom of the screen */
+    left: 20px;      /* 20px from the left of the screen */
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10000;   /* High z-index to ensure it stays on top of everything */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+">
+    <i id="mute-icon" class="fas fa-volume-up" style="font-size: 20px;"></i>
+</button>
 
     <audio id="background-music" loop autoplay>
         <source src="Assets/sound_Track/track_1.mp3" type="audio/mpeg">
@@ -40,15 +55,15 @@
         <div class="navbar">
             <div class="nav-left">
                 <ul>
-                    <li><a href="#">Bean Shopping Cart</a></li>
+                    <li><a href="#shopping_cart">Bean Shopping Cart</a></li>
                     <li><a href="#">Catering</a></li>
-                    <li><a href="#">About Us</a></li>
+                    <li><a href="#aboutus">About Us</a></li>
                 </ul>
             </div>
             <div class="nav-right">
                 <ul>
-                    <li><a href="#">Review</a></li>
-                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#review">Review</a></li>
+                    <li><a href="#contact_us">Contact Us</a></li>
                     <li><button class="login-btn"><i class="fas fa-sign-in-alt"></i> Login</button></li>
                     <li><button class="signup-btn"><i class="fas fa-user-plus"></i> Signup</button></li>
                 </ul>
@@ -73,12 +88,25 @@
 
 
 
-
         <section class="content" data-aos="fade-up">
-            <div class="content-area">
-                <img style=" height: auto; width: 120vh; opacity: 80%;" src="Assets/Images/section_coffee_image.jpg"
-                    alt="Coffee Beans">
+            <div class="content-area" style="position: relative; overflow: hidden; width: 100%; text-align: center;">
+                <img src="Assets/Images/section_coffee_image.jpg" 
+                    alt="Coffee Beans"
+                    style="
+                        height: auto; 
+                        width: 120vh; 
+                        opacity: 0.8; 
+                        transition: transform 2s ease-in-out, opacity 1s ease-in-out; 
+                        transform: scale(1); 
+                        box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
+                        border-radius: 10px;
+                    " 
+                    onmouseover="this.style.transform='scale(1.3)'; this.style.opacity='1';this.style.border" 
+                    onmouseout="this.style.transform='scale(1)'; this.style.opacity='0.8';"
+                >
+            </div>
         </section>
+        
 
         <!-- Our Premium Coffee Beans Section -->
         <section class="premium-coffee" data-aos="fade-up">
@@ -100,10 +128,12 @@
                 selected to provide a distinct coffee experience.</p>
         </section>
 
+
+
         <!-- Product Section with Vertical Scroll -->
         <h2 style="text-align: center;">Our Coffee Beans</h2>
         <br>
-        <section class="product-section">
+        <section id="shopping_cart" class="product-section">
             <div class="product-container">
                 <!-- Product Card 1 -->
                 <div class="product-card">
@@ -158,55 +188,70 @@
         </section>
         <h2 style="text-align: center;">What Our Customers Say</h2>
         <br>
-        <section class="reviews-section">
 
-            <div class="review-card">
-                <img src="Assets/Images/reviewer.png" alt="Reviewer 1" class="reviewer-img">
+        <section id="review" class="reviews-section" style="display: flex; justify-content: space-around; padding: 40px; background-color: #ffe1a2; margin-bottom: 50px;">
+
+            <div class="review-card" style="background-color: white; border: 2px solid #ccc; border-radius: 10px; padding: 20px; text-align: center; width: 30%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease-in-out;">
+                <img src="Assets/Images/reviewer.png" alt="Reviewer 1" class="reviewer-img" style="width: 100px; height: 100px; border-radius: 50%; margin-bottom: 20px;">
                 <p>Happy reviewer is super excited being part of happy addons family.</p>
                 <h3>Evan Rachel</h3>
                 <p>Happy Officer</p>
                 <div class="star-rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                    <i class="far fa-star"></i>
+                    <i class="fas fa-star" style="color: #f39c12;"></i>
+                    <i class="fas fa-star" style="color: #f39c12;"></i>
+                    <i class="fas fa-star" style="color: #f39c12;"></i>
+                    <i class="fas fa-star-half-alt" style="color: #f39c12;"></i>
+                    <i class="far fa-star" style="color: #ccc;"></i>
                 </div>
             </div>
-
-            <div class="review-card">
-                <img src="Assets/Images/reviewer.png" alt="Reviewer 2" class="reviewer-img">
+        
+            <div class="review-card" style="background-color: white; border: 2px solid #ccc; border-radius: 10px; padding: 20px; text-align: center; width: 30%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease-in-out;">
+                <img src="Assets/Images/reviewer.png" alt="Reviewer 2" class="reviewer-img" style="width: 100px; height: 100px; border-radius: 50%; margin-bottom: 20px;">
                 <p>Happy reviewer is super excited being part of happy addons family.</p>
                 <h3>Louis Hoffman</h3>
                 <p>Happy Officer</p>
                 <div class="star-rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
+                    <i class="fas fa-star" style="color: #f39c12;"></i>
+                    <i class="fas fa-star" style="color: #f39c12;"></i>
+                    <i class="fas fa-star" style="color: #f39c12;"></i>
+                    <i class="fas fa-star" style="color: #f39c12;"></i>
+                    <i class="far fa-star" style="color: #ccc;"></i>
                 </div>
             </div>
-
-            <div class="review-card">
-                <img src="Assets/Images/reviewer.png" alt="Reviewer 3" class="reviewer-img">
+        
+            <div class="review-card" style="background-color: white; border: 2px solid #ccc; border-radius: 10px; padding: 20px; text-align: center; width: 30%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease-in-out;">
+                <img src="Assets/Images/reviewer.png" alt="Reviewer 3" class="reviewer-img" style="width: 100px; height: 100px; border-radius: 50%; margin-bottom: 20px;">
                 <p>Happy reviewer is super excited being part of happy addons family.</p>
                 <h3>Thoma Midleditch</h3>
                 <p>Happy Officer</p>
                 <div class="star-rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star" style="color: #f39c12;"></i>
+                    <i class="fas fa-star" style="color: #f39c12;"></i>
+                    <i class="fas fa-star" style="color: #f39c12;"></i>
+                    <i class="fas fa-star" style="color: #f39c12;"></i>
+                    <i class="fas fa-star" style="color: #f39c12;"></i>
                 </div>
             </div>
+        
         </section>
-
-
+        
+        <script>
+            // Add a hover effect to make the review cards pop out
+            const reviewCards = document.querySelectorAll('.review-card');
+        
+            reviewCards.forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    card.style.transform = 'scale(1.05)';
+                });
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = 'scale(1)';
+                });
+            });
+        </script>
+        
 
         <!-- About Us Section -->
-        <section class="about-us">
+        <section id="aboutus" class="about-us">
             <h2>About Us</h2>
             <p>At Little Avenue Des Italians, our passion for coffee began many years ago with a small café in the heart
                 of the city. Our founders, inspired by their love for Italian coffee culture, sought to create a place
@@ -229,7 +274,7 @@
         </section>
 
 
-        <section class="contact-section"
+        <section id="contact_us" class="contact-section"
             style=" margin:5px;margin-bottom: 50px; border-radius: 10px;  padding: 50px; text-align: center; position: relative; background-image: url('Assets/Images/image6.jpeg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
             <!-- Overlay for low opacity effect -->
             <div
