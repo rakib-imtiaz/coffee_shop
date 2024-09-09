@@ -4,7 +4,11 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
 body {
 
     font-family: 'Playfair Display', serif;
@@ -148,7 +152,7 @@ header {
 }
 
 .container {
-    transform:scale(.8);
+    transform:scale(.75);
     transform-origin: top;
 
     max-width: 1200px;
@@ -418,8 +422,8 @@ header {
 }
 
 .reviewer-img {
-    width: 100px;
-    height: 120px;
+    width: 80px;
+    height: 80px;
     border-radius: 30%;
     margin-bottom: 20px;
 }
@@ -582,9 +586,14 @@ header {
 }
 
 .contact-us {
+    margin: 10px;
+    margin-bottom: 10px;
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../Images/contact-us.jpg');
     background-size: cover;
     background-position: center;
+}
+.contact-section{
+    padding: 30px;
 }
 
 .contact-info {
@@ -599,26 +608,18 @@ header {
     border-radius: 10px;
 }
 
-
-
-
-/* Mute Button */
 .mute-btn {
-    position: fixed;
-    bottom: 20px;
-    /* Adjust the distance from the bottom */
-    left: 20px;
-    /* Adjust the distance from the left */
+    position: fixed; /* Stick to the viewport */
+    bottom: 20px;    /* 20px from the bottom of the screen */
+    left: 20px;      /* 20px from the left of the screen */
     background-color: #333;
     color: white;
     border: none;
     padding: 15px;
     cursor: pointer;
     border-radius: 50%;
-    z-index: 1000;
-    /* Ensure it stays on top of other elements */
+    z-index: 9999;   /* High z-index to ensure it stays on top of everything */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    /* Add a slight shadow for better visibility */
 }
 
 .mute-btn:hover {
@@ -628,10 +629,8 @@ header {
 }
 
 #mute-icon {
-    font-size: 20px;
-    /* Increase icon size if needed */
+    font-size: 20px; /* Increase icon size */
 }
-
 
 
 
@@ -715,6 +714,8 @@ header {
         margin-bottom: 10px;
     }
 }
+
+
 
 @media (max-width: 576px) {
     .navbar {

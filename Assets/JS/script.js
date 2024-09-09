@@ -39,32 +39,44 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // Select the navbar element
 const navbar = document.getElementById('navbar');
-
 let lastScrollTop = 0;
-let timerId = null;
-window.addEventListener('scroll', function() {
-  let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-  
-  console.log('Current Scroll:', currentScroll);  // Log the current scroll position
+let isHovering = false;
+let hideNavbarTimeout;
 
-  if (currentScroll > lastScrollTop || currentScroll === 0) {
-    // User is scrolling down or at the top of the website
-    console.log('Scrolling down or at the top');  // Log for scrolling down or at the top
+// Function to hide the navbar
+const hideNavbar = () => {
+    navbar.style.top = '-100px';
+};
 
-    // Set a timer to hide the navbar after 2-3 seconds
-    if (timerId) {
-      clearTimeout(timerId);
-    }
-    timerId = setTimeout(function() {
-      navbar.style.top = '-100px';
-    }, 2000);
-  } else {
-    // User is scrolling up - show the navbar immediately
-    console.log('Scrolling up');  // Log for scrolling up
-    navbar.style.top = '0';
-  }
-
-  // Update lastScrollTop with the new scroll position
-  lastScrollTop = currentScroll;
+// Detect mouse hover on the navbar
+navbar.addEventListener('mouseenter', () => {
+    isHovering = true;
+    clearTimeout(hideNavbarTimeout); // Clear the timeout to prevent hiding when hovering
+    navbar.style.top = '0'; // Ensure the navbar is visible when hovered
 });
 
+navbar.addEventListener('mouseleave', () => {
+    isHovering = false;
+    // Start a 3-second timer to hide the navbar if not hovering
+    hideNavbarTimeout = setTimeout(() => {
+        if (!isHovering) {
+            hideNavbar();
+        }
+    }, 1000); // 3 seconds
+});
+
+// Scroll event listener
+window.addEventListener('scroll', function () {
+    let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (currentScroll > lastScrollTop && !isHovering) {
+        // User is scrolling down and not hovering - hide the navbar immediately
+        hideNavbar();
+    } else {
+        // User is scrolling up or hovering - show the navbar
+        navbar.style.top = '0';
+    }
+
+    // Update lastScrollTop with the new scroll position
+    lastScrollTop = currentScroll;
+});
