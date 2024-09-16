@@ -30,6 +30,7 @@
 
 
 <body>
+
     <button id="mute-toggle" class="mute-btn" style="
     position: fixed; /* Stick to the viewport */
     bottom: 20px;    /* 20px from the bottom of the screen */
@@ -43,8 +44,8 @@
     z-index: 10000;   /* High z-index to ensure it stays on top of everything */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 ">
-    <i id="mute-icon" class="fas fa-volume-up" style="font-size: 20px;"></i>
-</button>
+        <i id="mute-icon" class="fas fa-volume-up" style="font-size: 20px;"></i>
+    </button>
 
     <audio id="background-music" loop autoplay>
         <source src="Assets/sound_Track/track_1.mp3" type="audio/mpeg">
@@ -53,38 +54,36 @@
 
     <header id="navbar">
         <div class="navbar">
-            <div class="nav-left">
-                <ul>
-                    <li><a href="#shopping_cart">Bean Shopping Cart</a></li>
-                    <li><a href="#">Catering</a></li>
-                    <li><a href="#aboutus">About Us</a></li>
-                </ul>
-            </div>
-            <div class="nav-right">
-                <ul>
-                    <li><a href="#review">Review</a></li>
-                    <li><a href="#contact_us">Contact Us</a></li>
-                    <li><button class="login-btn"><i class="fas fa-sign-in-alt"></i> Login</button></li>
-                    <li><button class="signup-btn"><i class="fas fa-user-plus"></i> Signup</button></li>
-                </ul>
-            </div>
+
+            <ul>
+                <li><a href="#shopping_cart">Bean Shopping Cart</a></li>
+                <li><a href="#">Catering</a></li>
+                <li><a href="#aboutus">About Us</a></li>
+
+
+                <li><a href="#review">Review</a></li>
+                <li><a href="#contact_us">Contact Us</a></li>
+            </ul>
+
+
+
         </div>
     </header>
 
-    <div class="container">
+    <div class="container" style=" display: flex; flex-direction: column;">
 
         <section class="contact-us" data-aos="fade-up">
         </section>
-        <section class="first-section" data-aos="fade-up">
+        <section class="first-section " data-aos="fade-up">
             <div class="header-top">
                 <div class="logo" style="text-align: center;">
-                    <img src="Assets/Images/logo_canva.png" alt="Little Avenue Coffee Logo" style="
-                        width: 200px; /* Default logo size */
+                    <!-- <img src="Assets/Images/logo_canva.png" alt="Little Avenue Coffee Logo" style=" -->
+                    <img src="Assets/Images/logo_new.png" alt="Little Avenue Coffee Logo" style="
+                         /* Default logo size */
                         transition: transform 0.6s ease; /* Smooth transition for zoom and spin */
-                    " 
-                    onmouseover="this.style.transform='scale(1.4) rotate(360deg)';" 
-                    onmouseout="this.style.transform='scale(1) rotate(0deg)';"> <!-- Zoom and spin effect -->
-        
+                    " onmouseover="this.style.transform='scale(1.4) rotate(360deg)';"
+                        onmouseout="this.style.transform='scale(1.1) rotate(0deg)';"> <!-- Zoom and spin effect -->
+
                     <p id="blinkingText" style="
                         font-size: 45px; /* Large text size */
                         text-align: center;
@@ -93,40 +92,93 @@
                         color: #6f4e37; /* Coffee-like color */
                         transition: transform 0.4s ease; /* Smooth transition for size change */
                         animation: blinkColor 1s infinite, changeFont 2s infinite; /* Blinking color and font change animations */
-                    " 
-                    onmouseover="this.style.transform='scale(1.2)';" 
-                    onmouseout="this.style.transform='scale(1)';">
+                    " onmouseover="this.style.transform='scale(1.2)';" onmouseout="this.style.transform='scale(1)';">
                         Little Avenue
                     </p>
+                    <div style="padding-top: 50px;">
+
+                        <button class="login-btn"><i class="fas fa-sign-in-alt"></i> Login</button>
+                        <button class="signup-btn"><i class="fas fa-user-plus"></i> Signup</button>
+
+                    </div>
+                    <button class="special-offer-btn"
+                        style="background-color: #ffd700; cursor: pointer; padding: 10px; margin-top: 20px; border-radius: 10px; transition: background-color 0.3s ease, transform 0.3s ease;"
+                        onmouseover="this.style.backgroundColor='#ff3737'; this.style.transform='scale(1.1)';"
+                        onmouseout="this.style.backgroundColor='#ffd700'; this.style.transform='scale(1)';"><i
+                            class="fas fa-gift"></i> Special Offer 25% off</button>
+                    </ul>
+
+
+
+
                 </div>
             </div>
         </section>
-        
+
         <!-- Add the animation CSS inside the <style> tag -->
         <style>
             @keyframes blinkColor {
-                0% { color: #6f4e37; } /* Coffee brown */
-                25% { color: #4b3621; } /* Darker brown */
-                50% { color: #a0522d; } /* Lighter brown */
-                75% { color: #d2691e; } /* Reddish brown */
-                100% { color: #6f4e37; } /* Back to coffee brown */
+                0% {
+                    color: #6f4e37;
+                }
+
+                /* Coffee brown */
+                25% {
+                    color: #4b3621;
+                }
+
+                /* Darker brown */
+                50% {
+                    color: #a0522d;
+                }
+
+                /* Lighter brown */
+                75% {
+                    color: #d2691e;
+                }
+
+                /* Reddish brown */
+                100% {
+                    color: #6f4e37;
+                }
+
+                /* Back to coffee brown */
             }
-        
+
             @keyframes changeFont {
-                0% { font-family: 'Playfair Display', serif; } /* Default font */
-                25% { font-family: 'Cormorant Garamond', serif; } /* Vintage font 1 */
-                50% { font-family: 'Libre Baskerville', serif; } /* Vintage font 2 */
-                75% { font-family: 'Cinzel', serif; } /* Vintage font 3 */
-                100% { font-family: 'Playfair Display', serif; } /* Back to default */
+                0% {
+                    font-family: 'Playfair Display', serif;
+                }
+
+                /* Default font */
+                25% {
+                    font-family: 'Cormorant Garamond', serif;
+                }
+
+                /* Vintage font 1 */
+                50% {
+                    font-family: 'Libre Baskerville', serif;
+                }
+
+                /* Vintage font 2 */
+                75% {
+                    font-family: 'Cinzel', serif;
+                }
+
+                /* Vintage font 3 */
+                100% {
+                    font-family: 'Playfair Display', serif;
+                }
+
+                /* Back to default */
             }
         </style>
-        
+
 
         <section class="content" data-aos="fade-up">
-            <div class="content-area" style="position: relative; overflow: hidden; width: 100%; text-align: center;">
-                <img src="Assets/Images/section_coffee_image.jpg" 
-                    alt="Coffee Beans"
-                    style="
+            <div class="content-area"
+                style="position: relative; overflow: hidden; width: 100%;border-radius: 10px; text-align: center;">
+                <img src="Assets/Images/section_coffee_image.jpg" alt="Coffee Beans" style="
                         height: auto; 
                         width: 120vh; 
                         opacity: 0.8; 
@@ -134,13 +186,11 @@
                         transform: scale(1); 
                         box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
                         border-radius: 10px;
-                    " 
-                    onmouseover="this.style.transform='scale(1.3)'; this.style.opacity='1';this.style.border" 
-                    onmouseout="this.style.transform='scale(1)'; this.style.opacity='0.8';"
-                >
+                    " onmouseover="this.style.transform='scale(1.3)'; this.style.opacity='1';this.style.border"
+                    onmouseout="this.style.transform='scale(1)'; this.style.opacity='0.8';">
             </div>
         </section>
-        
+
 
         <!-- Our Premium Coffee Beans Section -->
         <section class="premium-coffee" data-aos="fade-up">
@@ -211,6 +261,16 @@
                     <div class="swiper-slide"><img src="Assets/Images/image1.png" alt="Slide 1"></div>
                     <div class="swiper-slide"><img src="Assets/Images/image2.png" alt="Slide 2"></div>
                     <div class="swiper-slide"><img src="Assets/Images/image3.png" alt="Slide 3"></div>
+                    <div class="swiper-slide"><img src="Assets/Images/image4.jpeg" alt="Slide 4"></div>
+                    <div class="swiper-slide"><img src="Assets/Images/image5.jpeg" alt="Slide 5"></div>
+                    <div class="swiper-slide"><img src="Assets/Images/image6.jpeg" alt="Slide 6"></div>
+                    <div class="swiper-slide"><img src="Assets/Images/image20.jpeg" alt="Slide 7"></div>
+                    <div class="swiper-slide"><img src="Assets/Images/image8.jpeg" alt="Slide 8"></div>
+                    <div class="swiper-slide"><img src="Assets/Images/image9.jpeg" alt="Slide 9"></div>
+                    <div class="swiper-slide"><img src="Assets/Images/image19.jpeg" alt="Slide 10"></div>
+                    <div class="swiper-slide"><img src="Assets/Images/image11.jpeg" alt="Slide 11"></div>
+                    <div class="swiper-slide"><img src="Assets/Images/image12.jpeg" alt="Slide 12"></div>
+                    <div class="swiper-slide"><img src="Assets/Images/image13.jpeg" alt="Slide 13"></div>
                     <!-- Add more slides as needed -->
                 </div>
                 <!-- Pagination -->
@@ -223,10 +283,13 @@
         <h2 style="text-align: center;">What Our Customers Say</h2>
         <br>
 
-        <section id="review" class="reviews-section" style="display: flex; justify-content: space-around; padding: 40px; background-color: #ffe1a2; margin-bottom: 50px;">
+        <section id="review" class="reviews-section"
+            style="display: flex; justify-content: space-around; padding: 40px; background-color: #ffe1a2; margin-bottom: 50px;">
 
-            <div class="review-card" style="background-color: white; border: 2px solid #ccc; border-radius: 10px; padding: 20px; text-align: center; width: 30%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease-in-out;">
-                <img src="Assets/Images/reviewer.png" alt="Reviewer 1" class="reviewer-img" style="width: 100px; height: 100px; border-radius: 50%; margin-bottom: 20px;">
+            <div class="review-card"
+                style="background-color: white; border: 2px solid #ccc; border-radius: 10px; padding: 20px; text-align: center; width: 30%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease-in-out;">
+                <img src="Assets/Images/reviewer.png" alt="Reviewer 1" class="reviewer-img"
+                    style="width: 100px; height: 100px; border-radius: 50%; margin-bottom: 20px;">
                 <p>Happy reviewer is super excited being part of happy addons family.</p>
                 <h3>Evan Rachel</h3>
                 <p>Happy Officer</p>
@@ -238,9 +301,11 @@
                     <i class="far fa-star" style="color: #ccc;"></i>
                 </div>
             </div>
-        
-            <div class="review-card" style="background-color: white; border: 2px solid #ccc; border-radius: 10px; padding: 20px; text-align: center; width: 30%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease-in-out;">
-                <img src="Assets/Images/reviewer.png" alt="Reviewer 2" class="reviewer-img" style="width: 100px; height: 100px; border-radius: 50%; margin-bottom: 20px;">
+
+            <div class="review-card"
+                style="background-color: white; border: 2px solid #ccc; border-radius: 10px; padding: 20px; text-align: center; width: 30%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease-in-out;">
+                <img src="Assets/Images/reviewer.png" alt="Reviewer 2" class="reviewer-img"
+                    style="width: 100px; height: 100px; border-radius: 50%; margin-bottom: 20px;">
                 <p>Happy reviewer is super excited being part of happy addons family.</p>
                 <h3>Louis Hoffman</h3>
                 <p>Happy Officer</p>
@@ -252,9 +317,11 @@
                     <i class="far fa-star" style="color: #ccc;"></i>
                 </div>
             </div>
-        
-            <div class="review-card" style="background-color: white; border: 2px solid #ccc; border-radius: 10px; padding: 20px; text-align: center; width: 30%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease-in-out;">
-                <img src="Assets/Images/reviewer.png" alt="Reviewer 3" class="reviewer-img" style="width: 100px; height: 100px; border-radius: 50%; margin-bottom: 20px;">
+
+            <div class="review-card"
+                style="background-color: white; border: 2px solid #ccc; border-radius: 10px; padding: 20px; text-align: center; width: 30%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease-in-out;">
+                <img src="Assets/Images/reviewer.png" alt="Reviewer 3" class="reviewer-img"
+                    style="width: 100px; height: 100px; border-radius: 50%; margin-bottom: 20px;">
                 <p>Happy reviewer is super excited being part of happy addons family.</p>
                 <h3>Thoma Midleditch</h3>
                 <p>Happy Officer</p>
@@ -266,26 +333,26 @@
                     <i class="fas fa-star" style="color: #f39c12;"></i>
                 </div>
             </div>
-        
+
         </section>
-        
+
         <script>
             // Add a hover effect to make the review cards pop out
             const reviewCards = document.querySelectorAll('.review-card');
-        
+
             reviewCards.forEach(card => {
                 card.addEventListener('mouseenter', () => {
-                    card.style.transform = 'scale(1.05)';
+                    card.style.transform = 'scale(1.12)';
                 });
                 card.addEventListener('mouseleave', () => {
                     card.style.transform = 'scale(1)';
                 });
             });
         </script>
-        
+
 
         <!-- About Us Section -->
-        <section id="aboutus" class="about-us">
+        <section id="aboutus" class="about-us" style="transform: scale(.7);transform-origin: top;">
             <h2>About Us</h2>
             <p>At Little Avenue Des Italians, our passion for coffee began many years ago with a small café in the heart
                 of the city. Our founders, inspired by their love for Italian coffee culture, sought to create a place
@@ -308,8 +375,7 @@
         </section>
 
 
-        <section id="contact_us" class="contact-section"
-            style=" margin:5px;margin-bottom: 50px; border-radius: 10px;  padding: 50px; text-align: center; position: relative; background-image: url('Assets/Images/image6.jpeg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+        <section id="contact_us" class="contact-section">
             <!-- Overlay for low opacity effect -->
             <div
                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(255, 255, 255, 0.5); z-index: 1;">
@@ -362,19 +428,6 @@
                     </div>
                 </div>
 
-                <!-- Form Section -->
-                <form style="max-width: 600px; margin: 0 auto;">
-                    <input type="text" placeholder="Your Name"
-                        style="width: 100%; padding: 15px; margin-bottom: 20px; font-size: 16px; border: 1px solid #ccc; border-radius: 8px;">
-                    <input type="email" placeholder="Your Email"
-                        style="width: 100%; padding: 15px; margin-bottom: 20px; font-size: 16px; border: 1px solid #ccc; border-radius: 8px;">
-                    <textarea placeholder="Your Message" rows="5"
-                        style="width: 100%; padding: 15px; margin-bottom: 20px; font-size: 16px; border: 1px solid #ccc; border-radius: 8px;"></textarea>
-                    <button type="submit"
-                        style="background-color: #333; color: white; padding: 15px 30px; font-size: 16px; border: none; border-radius: 8px; cursor: pointer;">Send
-                        Message</button>
-                </form>
-
                 <!-- JavaScript for hover expand -->
                 <script>
                     const map = document.querySelector('.google-map iframe');
@@ -393,6 +446,21 @@
                         map.style.height = '200px'; // Return to original height
                     });
                 </script>
+
+                <!-- Form Section -->
+                <form style="max-width: 600px; margin: 0 auto;">
+                    <input type="text" placeholder="Your Name"
+                        style="width: 100%; padding: 15px; margin-bottom: 20px; font-size: 16px; border: 1px solid #ccc; border-radius: 8px;">
+                    <input type="email" placeholder="Your Email"
+                        style="width: 100%; padding: 15px; margin-bottom: 20px; font-size: 16px; border: 1px solid #ccc; border-radius: 8px;">
+                    <textarea placeholder="Your Message" rows="5"
+                        style="width: 100%; padding: 15px; margin-bottom: 20px; font-size: 16px; border: 1px solid #ccc; border-radius: 8px;"></textarea>
+                    <button type="submit"
+                        style="background-color: #333; color: white; padding: 15px 30px; font-size: 16px; border: none; border-radius: 8px; cursor: pointer;">Send
+                        Message</button>
+                </form>
+
+
             </div>
         </section>
 
@@ -407,6 +475,8 @@
         <button id="mute-toggle" class="mute-btn">
             <i id="mute-icon" class="fas fa-volume-up"></i>
         </button>
+
+
         <!-- Footer Section -->
         <footer
             style="background-color: #333; color: white; padding: 40px 0; text-align: center; position: relative; font-family: 'Playfair Display', serif;">
@@ -416,7 +486,8 @@
                 <!-- About Section -->
                 <div class="footer-about" style="flex-basis: 30%; margin-bottom: 20px;">
                     <h3 style="font-size: 24px; font-weight: bold; margin-bottom: 15px;">Little Avenue Des Italians</h3>
-                    <p style="font-size: 16px; line-height: 1.6;">Established in 2016, Little Avenue Des Italians is a
+                    <p style="font-size: 16px; line-height: 1.6;">Established About Us
+                        in 2016, Little Avenue Des Italians is a
                         passion-driven café offering the finest coffee experiences in Melbourne. Join us to enjoy
                         delightful coffee and warm hospitality.</p>
                 </div>
