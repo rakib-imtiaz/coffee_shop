@@ -1,0 +1,110 @@
+/* General styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+    background-color: #f4f4f4;
+}
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+/* Side Panel */
+.side-panel {
+    width: 250px;
+    height: 100vh;
+    background-color: #6a3b16;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(-250px);
+    transition: transform 0.4s ease;
+}
+
+.side-panel ul {
+    list-style-type: none;
+    padding: 20px;
+}
+
+.side-panel ul li {
+    margin-bottom: 20px;
+}
+
+.side-panel ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.side-panel ul li a:hover {
+    background-color: #5a3012;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    flex-grow: 1;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 36px;
+    color: #6a3b16;
+}
+
+header p {
+    font-size: 18px;
+    color: #333;
+}
+
+/* Dashboard Panels */
+.dashboard-panels {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));  /* Better responsiveness */
+    gap: 30px;  /* Increase gap between cards */
+}
+
+.panel {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.panel:hover {
+    transform: translateY(-10px);  /* Hover effect to raise card slightly */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);  /* More pronounced shadow on hover */
+}
+
+.panel h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Ensure charts have consistent size */
+canvas {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Animation for hover */
+.side-panel:hover {
+    transform: translateX(0);
+}

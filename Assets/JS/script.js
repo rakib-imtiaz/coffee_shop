@@ -81,3 +81,33 @@ document.addEventListener("DOMContentLoaded", function() {
 //     lastScrollTop = currentScroll;
 // });
 
+
+
+// login modal
+   // Get modal elements
+   var modal = document.getElementById('loginModal');
+   var loginBtn = document.getElementById('loginBtn');
+   var adminLogin = document.getElementById('adminLogin');
+   var customerLogin = document.getElementById('customerLogin');
+
+   // When the user clicks the login button, show the modal
+   loginBtn.onclick = function() {
+       modal.style.display = 'block';
+   }
+
+   // Admin login click handler
+   adminLogin.onclick = function() {
+       window.location.href = 'admin_login.php'; // Redirect to admin login page
+   }
+
+   // Customer login click handler
+   customerLogin.onclick = function() {
+       window.location.href = 'customer_login.php'; // Redirect to customer login page
+   }
+
+   // Close the modal when clicking outside of it
+   window.onclick = function(event) {
+       if (event.target == modal) {
+           modal.style.display = 'none';
+       }
+   }
