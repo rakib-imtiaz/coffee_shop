@@ -2,12 +2,12 @@
     // Place this at the very top of your file, before any HTML output
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if (isset($_POST['adminLogin'])) {
-            header('Location: /admin/admin_login.php');
+            header('Location: /views/admin/admin_login.php');
             exit(); // Ensure the script stops here after the redirect
         }
 
         if (isset($_POST['customerLogin'])) {
-            header('Location: /customer_login.php');
+            header('Location: /views/customer/customer_login.php');
             exit();
         }
     }
@@ -23,7 +23,7 @@
     <title>Little Avenue Coffee</title>
 
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
     <link js>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <!-- Font Awesome -->
@@ -32,7 +32,7 @@
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"> <!-- Swiper.js -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="Assets/JS/script.js" defer></script>
+    <script src="assets/js/script.js" defer></script>
 
     <!-- font -->
 
@@ -63,7 +63,7 @@
     </button>
 
     <audio id="background-music" loop autoplay>
-        <source src="Assets/sound_Track/track_1.mp3" type="audio/mpeg">
+        <source src="assets/sound_Track/track_1.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
 
@@ -92,8 +92,8 @@
         <section class="first-section " data-aos="fade-up">
             <div class="header-top">
                 <div class="logo" style="text-align: center;">
-                    <!-- <img src="Assets/Images/logo_canva.png" alt="Little Avenue Coffee Logo" style=" -->
-                    <img src="Assets/Images/logo_new.png" alt="Little Avenue Coffee Logo" style="
+                    <!-- <img src="assets/images/logo_canva.png" alt="Little Avenue Coffee Logo" style=" -->
+                    <img src="assets/images/logo_new.png" alt="Little Avenue Coffee Logo" style="
                          /* Default logo size */
                         transition: transform 0.6s ease; /* Smooth transition for zoom and spin */
                     " onmouseover="this.style.transform='scale(1.4) rotate(360deg)';"
@@ -196,7 +196,7 @@
         <section class="content" data-aos="fade-up">
             <div class="content-area"
                 style="position: relative; overflow: hidden; width: 100%;border-radius: 10px; text-align: center;">
-                <img src="Assets/Images/section_coffee_image.jpg" alt="Coffee Beans" style="
+                <img src="assets/images/section_coffee_image.jpg" alt="Coffee Beans" style="
                         height: auto; 
                         width: 120vh; 
                         opacity: 0.8; 
@@ -239,7 +239,7 @@
             <div class="product-container">
                 <!-- Product Card 1 -->
                 <div class="product-card">
-                    <img src="Assets/Images/DARK ROAST BEANS.jpeg" alt="Dark Roast Beans">
+                    <img src="assets/images/DARK ROAST BEANS.jpeg" alt="Dark Roast Beans">
                     <div class="product-info">
                         <h3>Dark Roast Beans</h3>
                         <p>Deep, smoky flavor with a hint of spice.</p>
@@ -250,7 +250,7 @@
 
                 <!-- Product Card 2 -->
                 <div class="product-card">
-                    <img src="Assets/Images/DECAFFEINATED BEANS.jpeg" alt="Decaffeinated Beans">
+                    <img src="assets/images/DECAFFEINATED BEANS.jpeg" alt="Decaffeinated Beans">
                     <div class="product-info">
                         <h3>Decaffeinated Beans</h3>
                         <p>Mild, smooth, and full of flavor without the caffeine kick.</p>
@@ -261,7 +261,7 @@
 
                 <!-- Product Card 3 -->
                 <div class="product-card">
-                    <img src="Assets/Images/LIGHT ROAST BEANS.jpeg" alt="Light Roast Beans">
+                    <img src="assets/images/LIGHT ROAST BEANS.jpeg" alt="Light Roast Beans">
                     <div class="product-info">
                         <h3>Light Roast Beans</h3>
                         <p>Bright, citrusy flavor with a hint of fruit.</p>
@@ -276,19 +276,19 @@
         <section class="content">
             <div class="swiper-container">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="Assets/Images/image1.png" alt="Slide 1"></div>
-                    <div class="swiper-slide"><img src="Assets/Images/image2.png" alt="Slide 2"></div>
-                    <div class="swiper-slide"><img src="Assets/Images/image3.png" alt="Slide 3"></div>
-                    <div class="swiper-slide"><img src="Assets/Images/image4.jpeg" alt="Slide 4"></div>
-                    <div class="swiper-slide"><img src="Assets/Images/image5.jpeg" alt="Slide 5"></div>
-                    <div class="swiper-slide"><img src="Assets/Images/image6.jpeg" alt="Slide 6"></div>
-                    <div class="swiper-slide"><img src="Assets/Images/image20.jpeg" alt="Slide 7"></div>
-                    <div class="swiper-slide"><img src="Assets/Images/image8.jpeg" alt="Slide 8"></div>
-                    <div class="swiper-slide"><img src="Assets/Images/image9.jpeg" alt="Slide 9"></div>
-                    <div class="swiper-slide"><img src="Assets/Images/image19.jpeg" alt="Slide 10"></div>
-                    <div class="swiper-slide"><img src="Assets/Images/image11.jpeg" alt="Slide 11"></div>
-                    <div class="swiper-slide"><img src="Assets/Images/image12.jpeg" alt="Slide 12"></div>
-                    <div class="swiper-slide"><img src="Assets/Images/image13.jpeg" alt="Slide 13"></div>
+                    <div class="swiper-slide"><img src="assets/images/image1.png" alt="Slide 1"></div>
+                    <div class="swiper-slide"><img src="assets/images/image2.png" alt="Slide 2"></div>
+                    <div class="swiper-slide"><img src="assets/images/image3.png" alt="Slide 3"></div>
+                    <div class="swiper-slide"><img src="assets/images/image4.jpeg" alt="Slide 4"></div>
+                    <div class="swiper-slide"><img src="assets/images/image5.jpeg" alt="Slide 5"></div>
+                    <div class="swiper-slide"><img src="assets/images/image6.jpeg" alt="Slide 6"></div>
+                    <div class="swiper-slide"><img src="assets/images/image20.jpeg" alt="Slide 7"></div>
+                    <div class="swiper-slide"><img src="assets/images/image8.jpeg" alt="Slide 8"></div>
+                    <div class="swiper-slide"><img src="assets/images/image9.jpeg" alt="Slide 9"></div>
+                    <div class="swiper-slide"><img src="assets/images/image19.jpeg" alt="Slide 10"></div>
+                    <div class="swiper-slide"><img src="assets/images/image11.jpeg" alt="Slide 11"></div>
+                    <div class="swiper-slide"><img src="assets/images/image12.jpeg" alt="Slide 12"></div>
+                    <div class="swiper-slide"><img src="assets/images/image13.jpeg" alt="Slide 13"></div>
                     <!-- Add more slides as needed -->
                 </div>
                 <!-- Pagination -->
@@ -306,7 +306,7 @@
 
             <div class="review-card"
                 style="background-color: white; border: 2px solid #ccc; border-radius: 10px; padding: 20px; text-align: center; width: 30%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease-in-out;">
-                <img src="Assets/Images/reviewer.png" alt="Reviewer 1" class="reviewer-img"
+                <img src="assets/images/reviewer.png" alt="Reviewer 1" class="reviewer-img"
                     style="width: 100px; height: 100px; border-radius: 50%; margin-bottom: 20px;">
                 <p>Happy reviewer is super excited being part of happy addons family.</p>
                 <h3>Evan Rachel</h3>
@@ -322,7 +322,7 @@
 
             <div class="review-card"
                 style="background-color: white; border: 2px solid #ccc; border-radius: 10px; padding: 20px; text-align: center; width: 30%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease-in-out;">
-                <img src="Assets/Images/reviewer.png" alt="Reviewer 2" class="reviewer-img"
+                <img src="assets/images/reviewer.png" alt="Reviewer 2" class="reviewer-img"
                     style="width: 100px; height: 100px; border-radius: 50%; margin-bottom: 20px;">
                 <p>Happy reviewer is super excited being part of happy addons family.</p>
                 <h3>Louis Hoffman</h3>
@@ -338,7 +338,7 @@
 
             <div class="review-card"
                 style="background-color: white; border: 2px solid #ccc; border-radius: 10px; padding: 20px; text-align: center; width: 30%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease-in-out;">
-                <img src="Assets/Images/reviewer.png" alt="Reviewer 3" class="reviewer-img"
+                <img src="assets/images/reviewer.png" alt="Reviewer 3" class="reviewer-img"
                     style="width: 100px; height: 100px; border-radius: 50%; margin-bottom: 20px;">
                 <p>Happy reviewer is super excited being part of happy addons family.</p>
                 <h3>Thoma Midleditch</h3>
@@ -425,13 +425,13 @@
                         <!-- Social Media Links -->
                         <div style="display: flex; justify-content: center; gap: 20px; margin-top: 20px;">
                             <a href="https://www.facebook.com/" target="_blank">
-                                <img src="Assets/Images/facebook.png" alt="Facebook" style="width: 40px; height: 40px;">
+                                <img src="assets/images/facebook.png" alt="Facebook" style="width: 40px; height: 40px;">
                             </a>
                             <a href="https://www.twitter.com/" target="_blank">
-                                <img src="Assets/Images/twitter.png" alt="Twitter" style="width: 40px; height: 40px;">
+                                <img src="assets/images/twitter.png" alt="Twitter" style="width: 40px; height: 40px;">
                             </a>
                             <a href="https://www.instagram.com/" target="_blank">
-                                <img src="Assets/Images/instagram.png" alt="Instagram"
+                                <img src="assets/images/instagram.png" alt="Instagram"
                                     style="width: 40px; height: 40px;">
                             </a>
                         </div>
@@ -489,10 +489,9 @@
 
 
 
-        <!-- Mute/Unmute Button -->
-        <button id="mute-toggle" class="mute-btn">
+        <!-- <button id="mute-toggle" class="mute-btn">
             <i id="mute-icon" class="fas fa-volume-up"></i>
-        </button>
+        </button> -->
 
 
 
@@ -560,13 +559,13 @@
                     <h3 style="font-size: 24px; font-weight: bold; margin-bottom: 15px;">Follow Us</h3>
                     <div style="display: flex; justify-content: center; gap: 20px;">
                         <a href="https://www.facebook.com" target="_blank">
-                            <img src="Assets/Images/facebook.png" alt="Facebook" style="width: 40px; height: 40px;">
+                            <img src="assets/images/facebook.png" alt="Facebook" style="width: 40px; height: 40px;">
                         </a>
                         <a href="https://www.twitter.com" target="_blank">
-                            <img src="Assets/Images/twitter.png" alt="Twitter" style="width: 40px; height: 40px;">
+                            <img src="assets/images/twitter.png" alt="Twitter" style="width: 40px; height: 40px;">
                         </a>
                         <a href="https://www.instagram.com" target="_blank">
-                            <img src="Assets/Images/instagram.png" alt="Instagram" style="width: 40px; height: 40px;">
+                            <img src="assets/images/instagram.png" alt="Instagram" style="width: 40px; height: 40px;">
                         </a>
                     </div>
                 </div>

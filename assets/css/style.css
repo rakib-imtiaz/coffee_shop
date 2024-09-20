@@ -17,7 +17,7 @@ html {
 body {
 
     font-family: 'Playfair Display', serif;
-    background-image: url('Assets/Images/background_image_2.png');
+    background-image: url('/assets/images/background_image_2.png');
     /* Black-and-white pattern */
     background-size: 40%;
     min-height: 100vh;
@@ -160,7 +160,7 @@ header {
     margin-top: 30px;
     background-color: white;
     /* Ensure the content area has the same background as the navbar */
-    background-image: url('Assets/Images/border.png');
+    background-image: url('/assets/images/border.png');
     /* Border image if necessary */
     background-size: contain;
     background-position: center;
@@ -591,7 +591,7 @@ header {
 
 /* .contact-us {
     margin-bottom: 10px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../Images/contact-us.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../images/contact-us.jpg');
     background-size: cover;
     background-position: center;
     transform: scale(5.7);
@@ -604,7 +604,7 @@ header {
     padding: 50px;
     text-align: center;
     position: relative;
-    background-image: url('Assets/Images/image6.jpeg');
+    background-image: url('/assets/images/image6.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -657,9 +657,9 @@ header {
 
 /* Modal Styling */
 .modal {
-    display: none; 
-    position: fixed; 
-    z-index: 1; 
+    display: none;
+    position: fixed;
+    z-index: 1;
     left: 0;
     top: 0;
     width: 100%;
@@ -670,15 +670,19 @@ header {
 /* Position the modal closer to the top of the screen */
 .modal-content {
     position: absolute;
-    top: 5%;  /* Center the modal vertically */
-    left: 50%;  /* Center the modal horizontally */
-    transform: translate(-50%, -50%);  /* Ensure it's properly centered */
+    top: 5%;
+    /* Center the modal vertically */
+    left: 50%;
+    /* Center the modal horizontally */
+    transform: translate(-50%, -50%);
+    /* Ensure it's properly centered */
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-    width: 300px;  /* Adjust the width to make it more compact */
+    width: 300px;
+    /* Adjust the width to make it more compact */
     max-width: 100%;
 }
 

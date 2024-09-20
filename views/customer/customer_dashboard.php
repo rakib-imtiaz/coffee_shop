@@ -6,7 +6,7 @@
     <title>Customer Dashboard</title>
 
     <!-- Link to external CSS -->
-    <link rel="stylesheet" href="../Assets/CSS/customer_dashboard.css">
+    <link rel="stylesheet" href="../../assets/css/customer_dashboard.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 
